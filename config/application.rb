@@ -16,7 +16,7 @@ module PracticeBasic
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.generators do |g|
-      g.skip_routes true
+      g.skip_routes true #ルーティングの変更を行わない
       g.assets false
       g.helper false
       g.test_framework false

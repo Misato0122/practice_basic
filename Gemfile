@@ -5,6 +5,11 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
+gem 'bootstrap', '~> 4.3.1'
+gem 'font-awesome-sass'
+gem 'jquery-rails'
+gem 'sorcery'
+gem 'pry-byebug'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server

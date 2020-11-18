@@ -94,6 +94,8 @@ GEM
       request_store (>= 1.0)
     erubi (1.10.0)
     execjs (2.7.0)
+    faker (2.14.0)
+      i18n (>= 1.6, < 2)
     faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
@@ -259,6 +261,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   draper
+  faker
   font-awesome-sass
   jbuilder (~> 2.7)
   jquery-rails

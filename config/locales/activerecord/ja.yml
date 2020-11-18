@@ -9,3 +9,6 @@ ja:
         email: Eメールアドレス
         password: パスワード
         password_confirmation: パスワード確認
+      board:
+        title: タイトル
+        body: 本文

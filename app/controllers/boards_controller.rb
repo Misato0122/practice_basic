@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
 
   def index
-    @boards = Board.all
+    @boards = Board.all.order(created_at: :desc)
   end
 
   def new
@@ -16,6 +16,12 @@ class BoardsController < ApplicationController
       flash.now[:danger] = '掲示板作成に失敗しました'
       render :new
     end
+  end
+
+  def show
+    @board = Board.find(params[:id])
+    @comments = @board.comments.all.order(created_at: :desc)
+    @comment = Comment.new
   end
 
   def edit

@@ -19,6 +19,16 @@
             </div>
           </div>
           <p><%= @board.body %></p>
+          <% if current_user.own?(@board) %>
+            <div class='mr10 float-right'>
+              <%= link_to edit_board_path(@board), id: 'button-edit-#{board.id}' do %>
+                <%= icon 'fa', 'pen' %>
+              <% end %>
+              <%= link_to board_path(@board), id: 'button-delete-#{board.id}', method: :delete, data: {confirm: '削除してもいいですか？'} do %>
+                <%= icon 'fas', 'trash' %>
+              <% end %>
+            </div>
+          <% end %>
         </div>
       </article>
     </div>

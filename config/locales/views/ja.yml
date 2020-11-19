@@ -1,8 +1,17 @@
 ja:
+  user:
+    new:
+      title: ユーザー登録ページ
   user_sessions:
+    new:
+      title: ログイン
     create:
       success: ユーザー登録が完了しました
       fail: ユーザー登録に失敗しました
   boards:
+    index:
+      title: 掲示板一覧
+    new:
+      title: 掲示板作成
     show:
       title: 掲示板詳細

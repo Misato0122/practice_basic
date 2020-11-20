@@ -1,0 +1,6 @@
+<%= link_to edit_board_path(board), id: 'button-edit-#{board.id}' do %>
+  <%= icon 'fa', 'pen' %>
+<% end %>
+<%= link_to board_path(board), id: 'button-delete-#{board.id}', method: :delete, data: {confirm: '削除しますか？'} do %>
+  <%= icon 'fas', 'trash' %>
+<% end %>

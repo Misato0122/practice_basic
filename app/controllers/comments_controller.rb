@@ -2,7 +2,6 @@ class CommentsController < ApplicationController
 
   def create
     comment = current_user.comments.create(comment_params)
-    comment.board_id = (params[:board_id])
     if comment.save
       redirect_to board_path(comment.board), success: 'コメントを投稿しました'
     else

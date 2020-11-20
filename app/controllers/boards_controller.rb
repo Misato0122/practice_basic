@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
 before_action :set_board, only: [:show, :edit, :update, :destroy]
   def index
-    @boards = Board.all.order(created_at: :desc)
+    @boards = Board.all.includes([:user, :bookmarks]).order(created_at: :desc)
   end
 
   def new
@@ -37,6 +37,10 @@ before_action :set_board, only: [:show, :edit, :update, :destroy]
   def destroy
     @board.destroy!
     redirect_to boards_path, success: '掲示板を削除しました'
+  end
+
+  def bookmarks
+    @bookmark_boards = current_user.bookmarks_boards.includes(:user).order(created_at: :desc)
   end
 
 private

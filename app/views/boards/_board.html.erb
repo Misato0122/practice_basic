@@ -6,14 +6,13 @@
         <h4 class="card-title">
           <%= link_to "#{ board.title }", board_path(board) %>
         </h4>
+        <div class='mr10 float-right'>
+        </div>
         <% if current_user.own?(board) %>
           <div class='mr10 float-right'>
-            <%= link_to edit_board_path(board), id: 'button-edit-#{board.id}' do %>
-              <%= icon 'fa', 'pen' %>
-            <% end %>
-            <%= link_to board_path(board), id: 'button-delete-#{board.id}', method: :delete, data: {confirm: '削除しますか？'} do %>
-              <%= icon 'fas', 'trash' %>
-            <% end %>
+          <%= render 'crud_menus', board: board %>
+        <% else %>
+          <%= render 'bookmarks/bookmark_area', board: board %>
           </div>
         <% end %>
         <ul class="list-inline">

@@ -1,5 +1,5 @@
 <div class="col-sm-12 col-lg-4 mb-3">
-  <div id="board-id-1">
+  <div id="board-id-<%=board.id%>">
     <div class="card">
     <%= image_tag board.board_image.url, class: 'card-img-top', width: 300, height: 200 %>
       <div class="card-body">
@@ -12,7 +12,7 @@
           <div class='mr10 float-right'>
           <%= render 'crud_menus', board: board %>
         <% else %>
-          <%= render 'bookmarks/bookmark_area', board: board %>
+          <%= render 'boards/bookmark_area', board: board %>
           </div>
         <% end %>
         <ul class="list-inline">

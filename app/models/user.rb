@@ -5,6 +5,8 @@ class User < ApplicationRecord
   # お気に入りにしている掲示板を取得する
   has_many :bookmarks_boards, through: :bookmarks, source: :board
 
+  mount_uploader :avatar, AvatarUploader
+
   authenticates_with_sorcery!
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }

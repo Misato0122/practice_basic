@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#top'
 
   resources :users
+  resource :profile
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'

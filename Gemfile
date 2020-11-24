@@ -15,6 +15,7 @@ gem 'draper'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'ransack'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
